@@ -26,7 +26,7 @@ host_input <- selectInput("host", "Ensembl host (only use when default doesn't w
 
 convert_input <- selectizeInput(
     "convert_to", "Convert to (might take a while to load, be patient!):" , choices = NULL,
-    options = list(create = TRUE), multiple = T
+    options = list(create = TRUE, plugins = list('remove_button')), multiple = T
 )
 
 

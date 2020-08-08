@@ -58,9 +58,12 @@ shinyServer(function(input, output, session) {
         print(converted_genes)
         
     },
-    extensions = c('Buttons'), 
+    server=FALSE,
+    extensions = c('Buttons', 'Scroller'), 
     options = list(
         dom = 'Bfrtip',
+        scrollY = 400,
+        scroller = TRUE,
         buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
     ),
    # align = "c",

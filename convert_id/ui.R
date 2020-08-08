@@ -20,6 +20,7 @@ keytype_input <- selectInput("keytype", "Type of ID supplied:",
                                 "External gene id" = "external_gene_id"))
 
 host_input <- selectInput("host", "Ensembl host (only use when default doesn't work):",
+                          selected = "asia.ensembl.org",
                              c("Asia" = "asia.ensembl.org",
                                "West US" = "uswest.ensembl.org",
                                "East US" = "useast.ensembl.org"))
@@ -32,7 +33,7 @@ convert_input <- selectizeInput(
 
 # output table
 
-table_output <- div(style="height:600px; overflow:scroll; align:text-center",
+table_output <- div(#style="height:600px; overflow:scroll; align:text-center",
     DT::dataTableOutput("converted_table")
 )
 
